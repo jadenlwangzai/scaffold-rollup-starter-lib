@@ -1,0 +1,14 @@
+node_modules
+.tea
+.DS_Store
+yarn.lock
+dist
+dist.zip
+.vscode
+.idea
+package-lock.json
+
+/libs/**/*.js
+/sdk/**/*.js
+/
+/**/*.wxml
