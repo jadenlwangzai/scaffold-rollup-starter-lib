@@ -6,9 +6,4 @@ dist
 dist.zip
 .vscode
 .idea
-package-lock.json
 
-/libs/**/*.js
-/sdk/**/*.js
-/
-/**/*.wxml

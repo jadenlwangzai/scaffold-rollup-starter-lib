@@ -1,59 +1,53 @@
 {
-  "name": "mp-event-bus",
-  "version": "1.0.0",
-  "author": "jaden.wang  <jaden_wong@icloud.com>",
-  "license": "MIT",
-  "description": "simple EventBus class is built for mini programs(Wechat/Alipay) using the publisher/subscriber pattern",
-  "main": "dist/index.js",
-  "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rollup -c",
-    "eslint:fix": "eslint --ext .tsx,.ts --fix ./src",
-    "prettier": "prettier  --config ./.prettierrc   --write ./src/**/*.{json,ts,tsx}"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@commitlint/cli": "^7.1.2",
-    "@commitlint/config-conventional": "^7.1.2",
-    "@typescript-eslint/eslint-plugin": "^2.4.0",
-    "@typescript-eslint/parser": "^2.4.0",
-    "commitizen": "^3.0.0",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^1.0.1",
-    "lint-staged": "^8.0.0",
-    "lodash.camelcase": "^4.3.0",
-    "prettier": "^1.18.2",
-    "rollup": "^1.25.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-sourcemaps": "^0.4.2",
-    "rollup-plugin-typescript2": "^0.24.3",
-    "rollup-watch": "^4.3.1",
-    "typescript": "^3.6.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://gitlab.infra.ahotels.tech/h5/npm/mp-event-bus.git"
-  },
-  "keywords": [
-    "eventbus",
-    "miniprogram",
-    "mp",
-    "pubsub",
-    "alipay",
-    "wechat"
-  ],
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
+    "name": "scaffold-rollup-lib",
+    "version": "1.0.0",
+    "author": "jaden.wang  <jaden_wong@icloud.com>",
+    "license": "MIT",
+    "description": "Simple EventBus class is built for mini programs(Wechat/Alipay) using the publisher/subscriber pattern",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "browser": "dist/index.umd.js",
+              "types": "dist/index.d.ts",
+    "scripts": {
+        "dev": "rollup -c -w",
+        "build": "rollup -c",
+        "eslint:fix": "eslint --ext .tsx,.ts --fix ./src",
+        "prettier": "prettier  --config ./.prettierrc   --write ./src/**/*.{json,ts,tsx}"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^7.1.2",
+        "@commitlint/config-conventional": "^7.1.2",
+        "@typescript-eslint/eslint-plugin": "^2.4.0",
+        "@typescript-eslint/parser": "^2.4.0",
+        "commitizen": "^3.0.0",
+        "eslint": "^6.5.1",
+        "eslint-config-prettier": "^6.4.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "husky": "^1.0.1",
+        "lint-staged": "^8.0.0",
+        "lodash.camelcase": "^4.3.0",
+        "prettier": "^1.18.2",
+        "rollup": "^1.25.1",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-json": "^4.0.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-sourcemaps": "^0.4.2",
+        "rollup-plugin-typescript2": "^0.24.3",
+        "rollup-watch": "^4.3.1",
+        "typescript": "^3.6.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ljadenwongl/scaffold-rollup-lib.git"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-conventional-changelog"
+        }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
     }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  }
 }

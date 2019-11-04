@@ -13,6 +13,7 @@ module.exports = {
         //指定代码的运行环境
         browser: true,
         node: true,
+        es6: true,
     },
     rules: {
         'prettier/prettier': 1,
