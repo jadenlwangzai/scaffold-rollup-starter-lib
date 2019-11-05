@@ -4,3 +4,4 @@ declare class Greeter {
     greet(): string;
 }
 export default Greeter;
+//# sourceMappingURL=b.d.ts.map
