@@ -4,13 +4,14 @@
     "author": "jaden.wang  <jaden_wong@icloud.com>",
     "license": "MIT",
     "description": "Simple EventBus class is built for mini programs(Wechat/Alipay) using the publisher/subscriber pattern",
-    "main": "lib/index.js",
+    "main": "lib/index.cjs.js",
     "module": "lib/index.esm.js",
     "browser": "lib/index.umd.js",
-    "types": "types/index.d.ts",
+    "types": "lib/index.d.ts",
     "scripts": {
         "dev": "rollup -c -w",
-        "build": "tsc && rollup -c",
+        "clean": "rm -rf ./lib ./types",
+        "build": "npm run clean && rollup -c",
         "eslint:fix": "eslint --ext .tsx,.ts --fix ./src",
         "prettier": "prettier  --config ./.prettierrc   --write ./src/**/*.{json,ts,tsx}"
     },

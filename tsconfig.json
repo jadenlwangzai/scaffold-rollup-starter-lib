@@ -7,12 +7,12 @@
         "esModuleInterop": true,
         // 目标js的版本
         "target": "es5",
-        // 目标代码的模块结构版本
+        // 目标代码的模块结构版本,rollup-plugin-typescript2默认是es2015
         "module": "es2015",
         // 是否生成声明文件
         "declaration": true,
         // 声明文件路径
-        "declarationDir": "./types",
+        "declarationMap": true,
         // 编译过程中需要引入的库文件的列表
         "lib": [
             "es2015",
@@ -37,10 +37,11 @@
         // 此处设置为node,才能解析import xx from 'xx'
         "moduleResolution": "node",
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "pretty": true,
     },
     // 入口文件
     "include": [
-        "src/index.ts"
+        "src/**/*.ts"
     ]
 }
