@@ -1,10 +1,12 @@
-import nodeResolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+import nodeResolve from 'rollup-plugin-node-resolve'; // 解析 node_modules 中的模块
+import commonjs from 'rollup-plugin-commonjs'; // 转换 CJS -> ESM, 通常配合上面一个插件使用
 
-import sourceMaps from 'rollup-plugin-sourcemaps';
+// import sourceMaps from 'rollup-plugin-sourcemaps';
 import { camelCase } from 'lodash';
 import typescript from 'rollup-plugin-typescript2';
 import json from 'rollup-plugin-json';
+// import { uglify } from 'rollup-plugin-uglify'; // 压缩 bundle 文件;因为 rollup-plugin-uglify 无法压缩 ES6 的语法，所以必须先用 babel 转。
+import { terser } from 'rollup-plugin-terser'; // 如果想直接压缩 ES6 的语法，可换成 rollup-plugin-terser
 
 import pkg from './package.json';
 
@@ -33,8 +35,8 @@ export default {
         typescript({
             exclude: 'node_modules/**',
         }),
-        commonjs(),
         nodeResolve(),
-        sourceMaps(),
+        commonjs(),
+        terser(),
     ],
 };
