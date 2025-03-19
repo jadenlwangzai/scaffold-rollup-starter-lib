@@ -45,26 +45,26 @@ importers:
         specifier: ^1.19.1
         version: 1.19.1
       rollup:
-        specifier: ^1.32.1
-        version: 1.32.1
+        specifier: ^2.79.2
+        version: 2.79.2
       rollup-plugin-commonjs:
         specifier: ^10.1.0
-        version: 10.1.0(rollup@1.32.1)
+        version: 10.1.0(rollup@2.79.2)
       rollup-plugin-json:
         specifier: ^4.0.0
         version: 4.0.0
       rollup-plugin-node-resolve:
         specifier: ^5.2.0
-        version: 5.2.0(rollup@1.32.1)
+        version: 5.2.0(rollup@2.79.2)
       rollup-plugin-sourcemaps:
         specifier: ^0.4.2
-        version: 0.4.2(rollup@1.32.1)
+        version: 0.4.2(rollup@2.79.2)
       rollup-plugin-terser:
         specifier: ^5.3.1
-        version: 5.3.1(rollup@1.32.1)
+        version: 5.3.1(rollup@2.79.2)
       rollup-plugin-typescript2:
         specifier: ^0.24.3
-        version: 0.24.3(rollup@1.32.1)(typescript@3.9.10)
+        version: 0.24.3(rollup@2.79.2)(typescript@3.9.10)
       rollup-watch:
         specifier: ^4.3.1
         version: 4.3.1
@@ -216,9 +216,6 @@ packages:
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
-
-  '@types/estree@1.0.6':
-    resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -1000,6 +997,11 @@ packages:
     engines: {node: '>= 4.0'}
     os: [darwin]
     deprecated: Upgrade to fsevents v2 to mitigate potential security issues
+
+  fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
 
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
@@ -1994,8 +1996,9 @@ packages:
     resolution: {integrity: sha512-6yjnIwfjpSrqA8IafyIu7fsEyeImNR4aDjA1bQ7KWeVuiA+Clfsx8+PGQkyABWIQzmauQ//tIJ5wAxLXsXs8qQ==}
     deprecated: rollup-watch functionality is now included in Rollup itself
 
-  rollup@1.32.1:
-    resolution: {integrity: sha512-/2HA0Ec70TvQnXdzynFffkjA6XN+1e2pEv/uKS5Ulca40g2L7KuOE3riasHoNVHOsFD5KKZgDsMk1CP3Tw9s+A==}
+  rollup@2.79.2:
+    resolution: {integrity: sha512-fS6iqSPZDs3dr/y7Od6y5nha8dW1YnbgtsyotCVvoFGKbERG++CVRFv1meyGDE1SNItQA8BrnCw7ScdAhRJ3XQ==}
+    engines: {node: '>=10.0.0'}
     hasBin: true
 
   run-async@2.4.1:
@@ -2529,12 +2532,12 @@ snapshots:
       '@types/node': 20.5.1
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@5.8.2)
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.8.2))(ts-node@10.9.2(@types/node@20.5.1)(typescript@5.8.2))(typescript@5.8.2)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.8.2))(ts-node@10.9.2(@types/node@20.5.1)(typescript@3.9.10))(typescript@5.8.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.2(@types/node@20.5.1)(typescript@3.9.10)
+      ts-node: 10.9.2(@types/node@20.5.1)(typescript@5.8.2)
       typescript: 5.8.2
     transitivePeerDependencies:
       - '@swc/core'
@@ -2646,8 +2649,6 @@ snapshots:
 
   '@types/estree@1.0.5': {}
 
-  '@types/estree@1.0.6': {}
-
   '@types/json-schema@7.0.15': {}
 
   '@types/minimist@1.2.5': {}
@@ -2661,6 +2662,7 @@ snapshots:
   '@types/node@22.13.10':
     dependencies:
       undici-types: 6.20.0
+    optional: true
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -3054,11 +3056,11 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.8.2))(ts-node@10.9.2(@types/node@20.5.1)(typescript@5.8.2))(typescript@5.8.2):
+  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.8.2))(ts-node@10.9.2(@types/node@20.5.1)(typescript@3.9.10))(typescript@5.8.2):
     dependencies:
       '@types/node': 20.5.1
       cosmiconfig: 8.3.6(typescript@5.8.2)
-      ts-node: 10.9.2(@types/node@20.5.1)(typescript@3.9.10)
+      ts-node: 10.9.2(@types/node@20.5.1)(typescript@5.8.2)
       typescript: 5.8.2
 
   cosmiconfig-typescript-loader@6.1.0(@types/node@20.5.1)(cosmiconfig@9.0.0(typescript@3.9.10))(typescript@3.9.10):
@@ -3511,6 +3513,9 @@ snapshots:
     dependencies:
       bindings: 1.5.0
       nan: 2.19.0
+    optional: true
+
+  fsevents@2.3.3:
     optional: true
 
   function-bind@1.1.2: {}
@@ -4460,49 +4465,49 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rollup-plugin-commonjs@10.1.0(rollup@1.32.1):
+  rollup-plugin-commonjs@10.1.0(rollup@2.79.2):
     dependencies:
       estree-walker: 0.6.1
       is-reference: 1.2.1
       magic-string: 0.25.9
       resolve: 1.22.8
-      rollup: 1.32.1
+      rollup: 2.79.2
       rollup-pluginutils: 2.8.2
 
   rollup-plugin-json@4.0.0:
     dependencies:
       rollup-pluginutils: 2.8.2
 
-  rollup-plugin-node-resolve@5.2.0(rollup@1.32.1):
+  rollup-plugin-node-resolve@5.2.0(rollup@2.79.2):
     dependencies:
       '@types/resolve': 0.0.8
       builtin-modules: 3.3.0
       is-module: 1.0.0
       resolve: 1.22.8
-      rollup: 1.32.1
+      rollup: 2.79.2
       rollup-pluginutils: 2.8.2
 
-  rollup-plugin-sourcemaps@0.4.2(rollup@1.32.1):
+  rollup-plugin-sourcemaps@0.4.2(rollup@2.79.2):
     dependencies:
-      rollup: 1.32.1
+      rollup: 2.79.2
       rollup-pluginutils: 2.8.2
       source-map-resolve: 0.5.3
 
-  rollup-plugin-terser@5.3.1(rollup@1.32.1):
+  rollup-plugin-terser@5.3.1(rollup@2.79.2):
     dependencies:
       '@babel/code-frame': 7.24.2
       jest-worker: 24.9.0
-      rollup: 1.32.1
+      rollup: 2.79.2
       rollup-pluginutils: 2.8.2
       serialize-javascript: 4.0.0
       terser: 4.8.1
 
-  rollup-plugin-typescript2@0.24.3(rollup@1.32.1)(typescript@3.9.10):
+  rollup-plugin-typescript2@0.24.3(rollup@2.79.2)(typescript@3.9.10):
     dependencies:
       find-cache-dir: 3.3.2
       fs-extra: 8.1.0
       resolve: 1.12.0
-      rollup: 1.32.1
+      rollup: 2.79.2
       rollup-pluginutils: 2.8.1
       tslib: 1.10.0
       typescript: 3.9.10
@@ -4523,11 +4528,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  rollup@1.32.1:
-    dependencies:
-      '@types/estree': 1.0.6
-      '@types/node': 22.13.10
-      acorn: 7.4.1
+  rollup@2.79.2:
+    optionalDependencies:
+      fsevents: 2.3.3
 
   run-async@2.4.1: {}
 
@@ -4792,7 +4795,7 @@ snapshots:
 
   trim-newlines@3.0.1: {}
 
-  ts-node@10.9.2(@types/node@20.5.1)(typescript@3.9.10):
+  ts-node@10.9.2(@types/node@20.5.1)(typescript@5.8.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
@@ -4806,7 +4809,7 @@ snapshots:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 3.9.10
+      typescript: 5.8.2
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
@@ -4841,7 +4844,8 @@ snapshots:
 
   undici-types@5.26.5: {}
 
-  undici-types@6.20.0: {}
+  undici-types@6.20.0:
+    optional: true
 
   union-value@1.0.1:
     dependencies:
