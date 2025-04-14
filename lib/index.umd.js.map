@@ -1,1 +1,0 @@
-{"version":3,"file":"index.umd.js","sources":["../src/index.ts","../src/b.ts","../src/a.ts"],"sourcesContent":[null,null,null],"names":["m","constructor","message","this","greeting","greet","console","log"],"mappings":"yOAIA,MAAMA,EAAI,ICJV,MAEI,WAAAC,CAAYC,GACRC,KAAKC,SAAWF,CACnB,CACD,KAAAG,GACI,MAAO,UAAYF,KAAKC,QAC3B,GDHiB,cACtBE,QAAQC,IAAIP,EAAEK,SACA,WACVC,QAAQC,IEPF,EFQV"}

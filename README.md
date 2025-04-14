@@ -1,44 +1,96 @@
-# rollup-starter-TS-lib
+# Scaffold Rollup Lib
 
-## 简单介绍
+A modern TypeScript library scaffold with Rollup bundling.
 
-这个是一个基于`rollup`打包和`TS`类型检测，构建lib类代码用的脚手架仓库。
+## Features
 
-> [rollup:Next-generation ES module bundler](https://github.com/rollup/rollup)
->
+- 📦 [Rollup](https://rollupjs.org/) for bundling
+- 🔥 TypeScript for type checking
+- 📏 ESLint for code linting
+- 💅 Prettier for code formatting
+- 🃏 Jest for testing
+- 📋 Commitizen for structured commit messages
+- 🔬 CommitLint for ensuring commit message follows convention
+- 👷 Github Actions for CI/CD
+- 📝 Standard Version for versioning and CHANGELOG generation
 
-Webpack和rollup对比：
-rollup最大的亮点就是Tree-shaking，即可以静态分析代码中的 import，并排除任何未使用的代码。这允许我们架构于现有工具和模块之上，而不会增加额外的依赖或使项目的大小膨胀。如果用webpack做，虽然可以实现tree-shaking，但是需要自己配置并且打包出来的代码非常臃肿，所以对于库文件和UI组件，rollup更加适合。
-
-## 快速启动-Cli
-
-### 安装依赖
+## Installation
 
 ```bash
 npm install
+# or
+yarn
+# or
+pnpm install
 ```
 
-### 研发监听
+## Development
 
 ```bash
+# Start development with watch mode
 npm run dev
-```
 
-### 构建打包
-
-```bash
+# Build the library
 npm run build
-```
 
-### 检测和修复代码：`ts`,`tsx`
+# Run tests
+npm test
 
-```bash
+# Run tests with coverage
+npm run test:coverage
+
+# Run linter
 npm run eslint:fix
-```
 
-### 格式化代码：`json`,`ts`,`tsx`
-
-```bash
+# Format code
 npm run prettier
 ```
+
+## Project Structure
+
+```
+scaffold-rollup-lib/
+├── .github/           # GitHub related files like workflows
+├── lib/               # Compiled output (not versioned)
+├── src/               # Source code
+│   ├── __tests__/     # Tests
+│   └── index.ts       # Entry point
+├── .editorconfig      # Editor configuration
+├── .eslintrc.js       # ESLint configuration
+├── .gitignore         # Git ignore rules
+├── .huskyrc           # Husky configuration
+├── .lintstagedrc      # Lint-staged configuration
+├── .nvmrc             # Node version
+├── .prettierrc        # Prettier configuration
+├── jest.config.js     # Jest configuration
+├── package.json       # NPM package configuration
+├── README.md          # README file
+├── rollup.config.js   # Rollup configuration
+└── tsconfig.json      # TypeScript configuration
+```
+
+## Publishing
+
+```bash
+# Create a new release (patch, minor, or major)
+npm run release
+npm run release:patch
+npm run release:minor
+npm run release:major
+
+# Publish to npm
+npm publish
+```
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes using commitizen: `npm run commit`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+
+## License
+
+MIT
 
