@@ -14,13 +14,11 @@ export default {
     output: [
         {
             file: pkg.main,
-            name: libraryName,
             format: 'cjs',
             sourcemap: true,
         },
         {
             file: pkg.module,
-            name: libraryName,
             format: 'es',
             sourcemap: true,
         },
@@ -29,6 +27,7 @@ export default {
             name: libraryName,
             format: 'umd',
             sourcemap: true,
+            plugins: [terser()],
         },
     ],
     watch: {
@@ -39,6 +38,5 @@ export default {
         typescript({ tsconfig: './tsconfig.json' }),
         nodeResolve(),
         commonjs(),
-        terser(),
     ],
 };

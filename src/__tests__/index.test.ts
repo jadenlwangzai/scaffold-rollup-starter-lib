@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest';
 import a from '../a';
 import Greeter from '../b';
 

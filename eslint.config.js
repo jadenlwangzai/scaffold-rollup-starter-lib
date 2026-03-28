@@ -7,12 +7,12 @@ export default tseslint.config(
         ignores: ['lib/**/*', 'node_modules/**/*', 'coverage/**/*'],
     },
     ...tseslint.configs.recommended,
+    prettierConfig,
     {
         plugins: {
             prettier: prettierPlugin,
         },
         rules: {
-            ...prettierConfig.rules,
             'prettier/prettier': 'error',
             '@typescript-eslint/explicit-function-return-type': 'off',
             '@typescript-eslint/no-explicit-any': 'warn',
