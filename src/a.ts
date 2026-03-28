@@ -1,3 +1,2 @@
-const a = 1;
-const b = 1;
+const a = 'a';
 export default a;

@@ -1,45 +1,21 @@
 {
     "compilerOptions": {
-        // 允许未执行的代码不报错
-        "allowUnreachableCode": true,
-        // 支持别名导入:
-        // import * as React from "react"
-        "esModuleInterop": true,
-        // 目标js的版本
-        "target": "es2020",
-        // 目标代码的模块结构版本,rollup-plugin-typescript2默认是es2015
-        "module": "es2020",
-        // 编译过程中需要引入的库文件的列表
-        "lib": [
-            "es2020",
-            "dom"
-        ],
-        // 在表达式和声明上有隐含的 any类型时报错。
-        "noImplicitAny": true,
-        // 删除注释
-        "removeComments": true,
-        // 保留 const和 enum声明
-        "preserveConstEnums": false,
-        // 生成sourceMap
-        "sourceMap": true,
-        // 目标文件所在路径
-        "outDir": "./lib",
-        // 严格模式, 强烈建议开启
+        "target": "ES2022",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "lib": ["ES2022", "DOM"],
         "strict": true,
-        // 额外支持解构/forof等功能
-        "downlevelIteration": true,
-        // 此处设置为node,才能解析import xx from 'xx'
-        "moduleResolution": "node",
+        "declaration": true,
+        "declarationDir": "./lib",
+        "outDir": "./lib",
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "pretty": true,
-         "allowJs": true,
-        "allowSyntheticDefaultImports": true,
-        "declaration": true,
-        "declarationDir": "./lib"
+        "skipLibCheck": true,
+        "removeComments": true
     },
-    // 入口文件
-    "include": [
-        "src/**/*.ts"
-    ]
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "lib", "src/**/__tests__/**"]
 }

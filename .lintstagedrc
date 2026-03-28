@@ -1,3 +1,4 @@
 {
-  "{src,test}/**/*.{ts,js,json,md}": [ "npm run eslint:fix", "npm run prettier" ]
+    "{src,test}/**/*.{ts,js}": ["eslint --fix", "prettier --write"],
+    "{src,test}/**/*.{json,md}": ["prettier --write"]
 }
